@@ -28,33 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            NomDesTables = new CheckedListBox();
+            button1 = new Button();
+            AffichageDeLaTable = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)AffichageDeLaTable).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // NomDesTables
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(274, 195);
-            label1.Name = "label1";
-            label1.Size = new Size(194, 35);
-            label1.TabIndex = 0;
-            label1.Text = "Tu as reussi !";
+            NomDesTables.FormattingEnabled = true;
+            NomDesTables.Location = new Point(12, 12);
+            NomDesTables.Name = "NomDesTables";
+            NomDesTables.Size = new Size(150, 114);
+            NomDesTables.TabIndex = 0;
+            NomDesTables.SelectedIndexChanged += NomDesTables_SelectedIndexChanged;  // Lier l'événement
+            // 
+            // button1
+            // 
+            button1.Location = new Point(12, 132);
+            button1.Name = "button1";
+            button1.Size = new Size(150, 29);
+            button1.TabIndex = 1;
+            button1.Text = "Gérer";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // AffichageDeLaTable
+            // 
+            AffichageDeLaTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            AffichageDeLaTable.Location = new Point(189, 12);
+            AffichageDeLaTable.Name = "AffichageDeLaTable";
+            AffichageDeLaTable.RowHeadersWidth = 51;
+            AffichageDeLaTable.Size = new Size(475, 298);
+            AffichageDeLaTable.TabIndex = 2;
+            AffichageDeLaTable.CellContentClick += affichageDeLaTable_CellContentClick;
+
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            ClientSize = new Size(676, 344);
+            Controls.Add(AffichageDeLaTable);
+            Controls.Add(button1);
+            Controls.Add(NomDesTables);
             Name = "Form2";
             Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)AffichageDeLaTable).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private CheckedListBox NomDesTables;
+        private Button button1;
+        private DataGridView AffichageDeLaTable;  // Assurez-vous d'avoir ce nom ici
+
+        // Ajout de la méthode manquante pour éviter l'erreur
+       
     }
 }

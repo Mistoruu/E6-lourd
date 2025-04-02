@@ -83,7 +83,7 @@
             label1.Name = "label1";
             label1.Size = new Size(99, 23);
             label1.TabIndex = 3;
-            label1.Text = "Username";
+            label1.Text = "Adresse Email";
             label1.Click += label1_Click;
             // 
             // label2
@@ -94,7 +94,7 @@
             label2.Name = "label2";
             label2.Size = new Size(98, 23);
             label2.TabIndex = 4;
-            label2.Text = "Password";
+            label2.Text = "Mot de Passe";
             // 
             // button1
             // 
@@ -132,6 +132,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(228, 27);
             textBox2.TabIndex = 8;
+            textBox2.UseSystemPasswordChar = true;
             // 
             // Form1
             // 

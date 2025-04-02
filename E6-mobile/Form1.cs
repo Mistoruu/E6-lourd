@@ -27,7 +27,7 @@ namespace E6_Mobile
             }
 
             string servername = "localhost";
-            string dbname = "bdd_e6_desktop";
+            string dbname = "bdd_e5";
             string dbusername = "root";
             string dbpassword = "";
 
