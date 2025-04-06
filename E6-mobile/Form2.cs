@@ -21,7 +21,7 @@ namespace E6_Mobile
 
         private void InitializeDatabaseConnection()
         {
-            string connectionString = "server=localhost;database=bdd_e5;uid=root;pwd=;";
+            string connectionString = "server=localhost;database=bdd_e5;uid=root;pwd=;Allow Zero Datetime=True;Convert Zero Datetime=True;";
             conn = new MySqlConnection(connectionString);
         }
 

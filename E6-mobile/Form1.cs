@@ -2,7 +2,6 @@ using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using BCrypt.Net;
-using System.Linq.Expressions;
 
 namespace E6_Mobile
 {
@@ -38,7 +37,7 @@ namespace E6_Mobile
                 conn = new MySqlConnection(connString);
                 conn.Open();
 
-                string query = "SELECT * FROM users WHERE email = @Email";
+                string query = "SELECT * FROM admin WHERE email = @Email";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Email", email);
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -60,7 +59,7 @@ namespace E6_Mobile
                 }
                 else
                 {
-                    MessageBox.Show("Utilisateur non trouvé");
+                    MessageBox.Show("Administrateur non trouvé");
                 }
             }
             catch (Exception ex)
@@ -75,7 +74,6 @@ namespace E6_Mobile
                 }
             }
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -106,7 +104,5 @@ namespace E6_Mobile
         {
 
         }
-
     }
-
 }
